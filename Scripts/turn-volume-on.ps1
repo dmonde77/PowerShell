@@ -11,10 +11,9 @@
 	https://github.com/fleschutz/PowerShell
 #>
 
-try {
+function volume_on_off {
 	$obj = new-object -com wscript.shell
 	$obj.SendKeys([char]173)
-} catch {
-	"⚠️ Error: $($Error[0]) ($($MyInvocation.MyCommand.Name):$($_.InvocationInfo.ScriptLineNumber))"
-	exit 1
 }
+
+volumen_on_off
